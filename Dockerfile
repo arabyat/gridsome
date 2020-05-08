@@ -1,4 +1,11 @@
-FROM node:12-alpine
+FROM node:latest
 
-RUN apk update && apk upgrade && apk --no-cache add util-linux git g++ gcc libgcc libstdc++ linux-headers make python && \
-    rm -rf /var/cache/apk/*
+WORKDIR /app
+
+COPY package.json .
+RUN npm install --global @gridsome/cli
+
+RUN npm install
+COPY . .
+EXPOSE 8080
+CMD gridsome develop
