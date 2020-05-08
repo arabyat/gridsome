@@ -27,4 +27,4 @@ This repository holds the [Gridsome](https://gridsome.org) project for the Konsu
 
 ### For Production
 
-Use `gridsome build` to build the project for production. The default output directory is `dist`.
+Use `gridsome build` to build the project for production. The default output directory is `dist`.# Gridsome
