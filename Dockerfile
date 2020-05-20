@@ -5,6 +5,7 @@ RUN npm install --global @gridsome/cli
 RUN npm install
 COPY . .
 RUN gridsome build
-RUN cp -r .build /var/www/html
+RUN mkdir /var/www/html
+RUN cp -r dist /var/www/html
 EXPOSE 8080
 CMD gridsome develop
